@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../styles/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../styles/fonts/roboto/Roboto-Bold.ttf) format("truetype");
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../../styles/fonts/roboto/Roboto-Thin.ttf) format("truetype");
+    font-weight: 200;
+}
+// Usage
+h1, h2 {
+    @include typography_roboto;
+}
+p {
+    @include typography_roboto ($fontsize-10,$fontweight-200);
+}
+span {
+    @include typography_roboto ($fontsize-10,$fontweight-400);
+}
+button {
+    @include typography_roboto ($fontsize-10,$fontweight-400)
+}

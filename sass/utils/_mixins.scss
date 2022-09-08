@@ -1,0 +1,19 @@
+@mixin shadow {
+    box-shadow: 0px 5px 8px 1px darken($color-background, 10%)
+}
+
+@mixin bordure {
+    border-radius: 20px;
+}
+
+@mixin typography_roboto ($fontsize-15: 1.5em,$fontweight-600: 600) {
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: $fontweight-600;
+    font-size: $fontsize-15;
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

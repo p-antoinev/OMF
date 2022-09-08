@@ -1,0 +1,50 @@
+.functioning__card-style {
+    background-color: $color-background;
+    width: 85%;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 20px;
+    @include shadow;
+}
+
+.restaurant__card {
+    width: 90%;
+    height: 250px;
+    margin: 30px auto;
+    @include bordure;
+    @include shadow;
+    position: relative;
+    &-notif {
+        @include flexcenter;
+        @include typography_roboto ($fontsize-10,$fontweight-400);
+        background-color: $color-terciary;
+        color: darken($color-terciary, 40%);
+        width: 80px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    & img {
+        width: 100%;
+        height: 70%;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+    }
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 10px;
+        & h2 {
+            font-size: $fontsize-12;
+        }
+        & p {
+            margin-top: 5px;
+        }
+        & i {
+            font-size: $fontsize-15;
+            margin-right: 10px;
+        }
+    } 
+}
