@@ -365,6 +365,9 @@ button {
   color: white;
   cursor: pointer;
   box-shadow: 0px 5px 8px 1px #aeaebe;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
 }
 
 .functioning__card-style {
