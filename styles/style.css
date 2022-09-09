@@ -360,14 +360,10 @@ button {
   border-radius: 30px;
   padding: 20px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  font-size: 1em;
   border: none;
   color: white;
   cursor: pointer;
   box-shadow: 0px 5px 8px 1px #aeaebe;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  font-size: 1.5em;
 }
 
 .functioning__card-style {
@@ -437,7 +433,8 @@ button {
   display: block;
   margin-top: 20px;
 }
-.header__location {
+
+.prev__location {
   height: 50px;
   display: flex;
   align-items: center;
@@ -445,25 +442,25 @@ button {
   background-color: #ededf0;
   box-shadow: inset 0px 2px 3px 0px #bcbcca;
 }
-.header__location i {
+.prev__location i {
   margin-right: 10px;
 }
-.header__location p {
+.prev__location p {
   font-weight: bold;
 }
-.header__reservation {
+.prev__reservation {
   background-color: #F5F5F7;
   padding: 8% 0;
   display: flex;
   flex-direction: column;
 }
-.header__reservation h1 {
+.prev__reservation h1 {
   margin-top: 0;
   margin: auto;
   text-align: center;
   width: 70%;
 }
-.header__reservation p {
+.prev__reservation p {
   width: 90%;
   margin: auto;
   margin-top: 15px;

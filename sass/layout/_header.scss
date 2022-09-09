@@ -8,40 +8,7 @@
         display: block;
         margin-top: 20px;
         }
-    }
-    &__location {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: darken($color-background, 3%);
-        box-shadow:inset 0px 2px 3px 0px darken($color-background, 20%);
-        & i {
-            margin-right: 10px;
-        }
-        & p {
-            font-weight: bold;
-        }
-    }
-    &__reservation {
-        background-color: $color-background;
-        padding: 8% 0;
-        display: flex;
-        flex-direction: column;
-        & h1 {
-            margin-top: 0;
-            margin: auto;
-            text-align: center;
-            width: 70%;
-        }
-        & p {
-            width: 90%;
-            margin: auto;
-            margin-top: 15px;
-            text-align: center;
-            font-size: 1.1em; 
-        }
-    }
+    }  
 }
 
 

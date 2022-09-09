@@ -3,11 +3,9 @@ button {
     margin: 5% auto;
     border-radius: 30px;
     padding: 20px;
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);;
-    font-size: 1em;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     border: none;
     color: $color-white;
     cursor: pointer;
     box-shadow: 0px 5px 8px 1px darken($color-background, 25%);
-    @include typography_roboto;
 }
