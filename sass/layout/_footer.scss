@@ -1,0 +1,24 @@
+.footer {
+    background-color: lighten($color-black, 20%);
+    padding: 20px 5%;
+    & h3 {
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+    & div {
+        display: flex;
+    }
+    & a {
+        color: $color-white;
+    }
+    & i {
+        color: $color-white;
+        margin-right: 10px;
+    }
+    & p {
+        font-weight: $fontweight-400;
+    }
+    &-space {
+        margin: 10px 0;
+    }
+}

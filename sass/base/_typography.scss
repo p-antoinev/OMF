@@ -13,9 +13,18 @@
     src: url(../../styles/fonts/roboto/Roboto-Thin.ttf) format("truetype");
     font-weight: 200;
 }
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(../../styles/fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
+}
+
 // Usage
 h1, h2 {
     @include typography_roboto;
+}
+h3 {
+    font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
 }
 p {
     @include typography_roboto ($fontsize-10,$fontweight-200);

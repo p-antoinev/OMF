@@ -315,6 +315,10 @@ template {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url(../../styles/fonts/roboto/Roboto-Regular.ttf) format("truetype");
@@ -330,10 +334,18 @@ template {
   src: url(../../styles/fonts/roboto/Roboto-Thin.ttf) format("truetype");
   font-weight: 200;
 }
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../styles/fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
+}
 h1, h2 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-size: 1.5em;
+}
+
+h3 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
 }
 
 p {
@@ -419,6 +431,7 @@ button {
 .restaurant__card-text i {
   font-size: 1.5em;
   margin-right: 10px;
+  color: black;
 }
 
 .header {
@@ -472,7 +485,7 @@ button {
   padding: 50px 0;
 }
 .functioning h1 {
-  margin-left: 20px;
+  margin-left: 5%;
 }
 .functioning__card {
   display: flex;
@@ -498,6 +511,39 @@ button {
 .functioning__card p {
   margin-left: 30px;
   font-weight: 600;
+}
+
+.restaurant {
+  background: #F5F5F7;
+  padding: 30px 0;
+}
+.restaurant__title {
+  margin-left: 5%;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 20px 5%;
+}
+.footer h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+.footer div {
+  display: flex;
+}
+.footer a {
+  color: white;
+}
+.footer i {
+  color: white;
+  margin-right: 10px;
+}
+.footer p {
+  font-weight: 400;
+}
+.footer-space {
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
