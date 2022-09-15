@@ -1,12 +1,20 @@
 .header {
     width: 100%;
-    &__logo{
-        margin-bottom: 15px;
+    height: 65px;
+    & i {
+        position: absolute;
+        top: 22px;
+        left: 30px;
+        font-size: 1.2em;
+    }
+    &__logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
         & img {
-        width: 10em;
+        width: 12em;
         margin: auto;
         display: block;
-        margin-top: 20px;
         }
     }  
 }

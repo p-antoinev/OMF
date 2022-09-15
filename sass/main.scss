@@ -3,21 +3,19 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+@import "./utils/animations";
 
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/icon";
 @import "./components/card";
+
 
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
-@import "./layout/main";
 @import "./layout/footer";
 
-
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";

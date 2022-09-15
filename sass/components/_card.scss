@@ -1,3 +1,4 @@
+/* Index - Partie "fontionnement" */
 .functioning__card-style {
     background-color: $color-background;
     width: 85%;
@@ -7,6 +8,7 @@
     @include shadow;
 }
 
+/* Index - Carte des restaurants */ 
 .restaurant__card {
     width: 90%;
     height: 250px;
@@ -32,10 +34,12 @@
         object-fit: cover;
     }
     &-text {
+        width: 100%;
+        height: 30%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 10px 10px;
+        padding: 0 20px;
         & h2 {
             font-size: $fontsize-12;
         }
@@ -43,9 +47,61 @@
             margin-top: 5px;
         }
         & i {
-            font-size: $fontsize-15;
             margin-right: 10px;
-            color: black;
         }
-    } 
+    }
+    & a {
+        width: 100%;
+        height: 100%;
+    }
 }
+
+/* Contenu - Carte des plats */
+
+.menu__card {
+    background-color: $color-white;
+    border-radius: 15px;
+    @include shadow;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    position: relative;
+    &--text {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+        & span {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    &--flex {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        & p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+    }
+    &--checkbloc {
+        width: 10%;
+        height: 100%;
+        background-color: $color-terciary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        right: 0;
+    }
+    & h2 {
+        @include typography_roboto ($fontsize-12,$fontweight-400);
+        margin-bottom: 5px;
+    }
+    
+}
+

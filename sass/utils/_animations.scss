@@ -1,0 +1,66 @@
+/* Animation icone Heart */
+.heart-colored {
+    transform: scale(0);
+    transition: transform 200ms ease-in;
+}
+
+.heart-white {
+    &:hover + .heart-colored {
+        transform: scale(1);   
+    }
+}
+
+
+/* Animation "check" menu */
+
+
+.menu__card {
+    &--text {
+        &:hover {
+            cursor: pointer;
+            animation: text-reduction 200ms linear forwards;
+            transform-origin: left;
+            & + .menu__card--checkbloc {
+                animation: checkbloc 200ms linear forwards;
+                transform-origin: right;
+                & i {
+                    animation: icon-rotate 400ms;
+                }
+            }
+        }
+    }
+    &--checkbloc {
+        transform: scale(0); 
+    }
+}
+
+@keyframes text-reduction {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 90%;
+        
+    }
+}
+
+@keyframes checkbloc {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+

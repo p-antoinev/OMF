@@ -310,6 +310,57 @@ template {
 /* font-size */
 /* font-weight */
 /* display */
+/* Animation icone Heart */
+.heart-colored {
+  transform: scale(0);
+  transition: transform 200ms ease-in;
+}
+
+.heart-white:hover + .heart-colored {
+  transform: scale(1);
+}
+
+/* Animation "check" menu */
+.menu__card--text:hover {
+  cursor: pointer;
+  animation: text-reduction 200ms linear forwards;
+  transform-origin: left;
+}
+.menu__card--text:hover + .menu__card--checkbloc {
+  animation: checkbloc 200ms linear forwards;
+  transform-origin: right;
+}
+.menu__card--text:hover + .menu__card--checkbloc i {
+  animation: icon-rotate 400ms;
+}
+.menu__card--checkbloc {
+  transform: scale(0);
+}
+
+@keyframes text-reduction {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes checkbloc {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -322,18 +373,27 @@ a {
 
 @font-face {
   font-family: "Roboto";
-  src: url(../../styles/fonts/roboto/Roboto-Regular.ttf) format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url(../../styles/fonts/roboto/Roboto-Bold.ttf) format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url(../../styles/fonts/roboto/Roboto-Thin.ttf) format("truetype");
+  src: url(../styles/fonts/roboto/Roboto-Thin.ttf) format("truetype");
   font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../styles/fonts/roboto/Roboto-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../styles/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../styles/fonts/roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 @font-face {
   font-family: "Shrikhand";
@@ -347,6 +407,12 @@ h1, h2 {
 
 h3 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 p {
@@ -379,6 +445,46 @@ button {
   box-shadow: 0px 5px 8px 1px #aeaebe;
 }
 
+/* centrage button page Menu */
+.button {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+/* heart icon */
+.fa-regular {
+  z-index: 1;
+  font-size: 1.5em;
+}
+
+.heart-colored {
+  z-index: 2;
+  position: absolute;
+  font-size: 1.5em;
+  color: red;
+}
+
+.heart-position-index {
+  right: 20px;
+}
+
+.heart-position-menu {
+  right: 30px;
+}
+
+/* Check Icon */
+.check-icon {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  font-size: 1.1em;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Index - Partie "fontionnement" */
 .functioning__card-style {
   background-color: #F5F5F7;
   width: 85%;
@@ -388,6 +494,7 @@ button {
   box-shadow: 0px 5px 8px 1px #d9d9e0;
 }
 
+/* Index - Carte des restaurants */
 .restaurant__card {
   width: 90%;
   height: 250px;
@@ -418,10 +525,12 @@ button {
   object-fit: cover;
 }
 .restaurant__card-text {
+  width: 100%;
+  height: 30%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 10px;
+  padding: 0 20px;
 }
 .restaurant__card-text h2 {
   font-size: 1.2em;
@@ -430,24 +539,83 @@ button {
   margin-top: 5px;
 }
 .restaurant__card-text i {
-  font-size: 1.5em;
   margin-right: 10px;
-  color: black;
+}
+.restaurant__card a {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contenu - Carte des plats */
+.menu__card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 8px 1px #d9d9e0;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  position: relative;
+}
+.menu__card--text {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+.menu__card--text span {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__card--flex {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.menu__card--flex p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card--checkbloc {
+  width: 10%;
+  height: 100%;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  right: 0;
+}
+.menu__card h2 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  margin-bottom: 5px;
 }
 
 .header {
   width: 100%;
+  height: 65px;
+}
+.header i {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  font-size: 1.2em;
 }
 .header__logo {
-  margin-bottom: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .header__logo img {
-  width: 10em;
+  width: 12em;
   margin: auto;
   display: block;
-  margin-top: 20px;
 }
 
+/* Index */
 .prev__location {
   height: 50px;
   display: flex;
@@ -522,9 +690,66 @@ button {
   margin-left: 5%;
 }
 
+/* Menu page */
+.head__img {
+  height: 200px;
+}
+.head__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.head__img--border {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  background-color: #F5F5F7;
+  bottom: 30px;
+  border-radius: 30px 30px 0 0;
+}
+
+.menu {
+  background-color: #F5F5F7;
+  border-radius: 40px 40px 0 0;
+  margin-top: -3em;
+  position: relative;
+}
+.menu__title {
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px 30px 0 30px;
+  margin-bottom: 30px;
+}
+.menu__title h3 {
+  font-size: 1.7em;
+}
+.menu__title i {
+  font-size: 1.5em;
+  margin-right: 20px;
+}
+.menu__section {
+  padding: 0 15px;
+  margin: 40px 0;
+}
+.menu__section--border {
+  width: 40px;
+  margin-top: 5px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu__section--flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+
 .footer {
   background-color: #333333;
   padding: 20px 5%;
+  height: 30%;
 }
 .footer h3 {
   color: white;

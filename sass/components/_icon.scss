@@ -1,0 +1,32 @@
+/* heart icon */
+.fa-regular {
+    z-index: 1;
+    font-size: $fontsize-15;
+}
+
+.heart-colored {
+    z-index: 2;
+    position: absolute;
+    font-size: $fontsize-15;
+    color: red;
+}
+
+.heart-position-index {
+    right: 20px;
+}
+
+.heart-position-menu {
+    right: 30px;
+}
+
+/* Check Icon */ 
+.check-icon {
+    background-color: $color-white;
+    color: $color-terciary;
+    border-radius: 50%;
+    font-size: 1.1em;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

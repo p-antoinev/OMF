@@ -7,7 +7,7 @@
 }
 
 @mixin typography_roboto ($fontsize-15: 1.5em,$fontweight-600: 600) {
-    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    font-family:"Roboto", Arial, Helvetica, sans-serif;
     font-weight: $fontweight-600;
     font-size: $fontsize-15;
 }
