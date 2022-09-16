@@ -1,3 +1,55 @@
+/* Index Loader */
+// spin
+.loader {
+    animation: loader-out 0ms 2950ms forwards;
+    &__spinner {
+        animation: spin 1000ms 150ms linear 2.5 forwards;
+        transform-origin: center;
+    }
+}
+
+
+@keyframes spin {
+   0% {
+    transform: rotate(0deg);
+   } 
+   100% {
+    transform: rotate(360deg);
+   }
+}
+
+@keyframes loader-out {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: translate(-99999px);
+    }
+}
+
+// Homepage out 
+/*
+$spin-dur: 1000ms;
+$spin-delay: 150ms;
+$body-delay: $spin-dur*3 + $spin-delay;
+.homepage{
+    animation: body-out 0ms $body-delay;
+}
+
+ @keyframes body-out {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+ }
+
+ */
+
+
+
+
 /* Animation icone Heart */
 .heart-colored {
     transform: scale(0);

@@ -1,0 +1,22 @@
+.loader {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    z-index: 5;
+    position: fixed;
+    inset: 0;
+    &__text {
+        font-family: 'Shrikhand';
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    &__spinner  {
+        width: 70px;
+        height: 70px;
+        border-top: 2px solid #15DEA5;
+        border-radius: 70px;
+    }
+}
