@@ -335,24 +335,6 @@ template {
     transform: translate(-99999px);
   }
 }
-/*
-$spin-dur: 1000ms;
-$spin-delay: 150ms;
-$body-delay: $spin-dur*3 + $spin-delay;
-.homepage{
-    animation: body-out 0ms $body-delay;
-}
-
- @keyframes body-out {
-    0% {
-        transform: translateX(-9999px);
-    }
-    100% {
-        transform: scaleX(0);
-    }
- }
-
- */
 /* Animation icone Heart */
 .heart-colored {
   transform: scale(0);
@@ -736,6 +718,7 @@ button {
 /* Menu page */
 .head__img {
   height: 200px;
+  width: 100%;
 }
 .head__img img {
   height: 100%;
