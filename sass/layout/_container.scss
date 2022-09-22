@@ -52,6 +52,7 @@
         }
         @include desktop-only{
             display: flex;
+            justify-content: space-between;
         }
     }
     &__card {

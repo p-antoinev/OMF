@@ -19,6 +19,12 @@
     right: 30px;
 }
 
+.fa-heart {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 /* Check Icon */ 
 .check-icon {
     background-color: $color-white;

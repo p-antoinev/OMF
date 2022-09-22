@@ -61,6 +61,7 @@ button {
             & + .menu__card--checkbloc {
                 animation: checkbloc 200ms  linear both;
                 transform-origin: right;
+                visibility: visible;
                 & i {
                     animation: icon-rotate 400ms;
                 }

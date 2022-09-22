@@ -91,6 +91,11 @@
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
+        & h2 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
         & p {
             white-space: nowrap;
             overflow: hidden;
@@ -101,12 +106,11 @@
         width: 10%;
         height: 100%;
         background-color: $color-terciary;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexcenter;
         border-radius: 0 15px 15px 0;
         position: absolute;
         right: 0;
+        visibility: hidden;
         @include tablette-only{
             width: 15%
         }
