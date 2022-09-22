@@ -348,18 +348,18 @@ template {
 /* Animation "check" menu */
 .menu__card--text:hover {
   cursor: pointer;
-  animation: text-reduction 200ms linear forwards;
+  animation: text-reduction 200ms linear both;
   transform-origin: left;
 }
 .menu__card--text:hover + .menu__card--checkbloc {
-  animation: checkbloc 200ms linear forwards;
+  animation: checkbloc 200ms linear both;
   transform-origin: right;
 }
 .menu__card--text:hover + .menu__card--checkbloc i {
   animation: icon-rotate 400ms;
 }
 .menu__card--checkbloc {
-  transform: scale(0);
+  transform: scaleX(0);
 }
 
 @keyframes text-reduction {
@@ -384,6 +384,29 @@ template {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/* Menu card loader */
+.menu__card {
+  animation: menu-loader 1000ms both;
+  transform-origin: top;
+}
+.menu__card--1 {
+  animation-delay: 200ms;
+}
+.menu__card--2 {
+  animation-delay: 400ms;
+}
+.menu__card--3 {
+  animation-delay: 600ms;
+}
+
+@keyframes menu-loader {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 * {

@@ -50,10 +50,10 @@
     &--text {
         &:hover {
             cursor: pointer;
-            animation: text-reduction 200ms linear forwards;
+            animation: text-reduction 200ms linear both;
             transform-origin: left;
             & + .menu__card--checkbloc {
-                animation: checkbloc 200ms linear forwards;
+                animation: checkbloc 200ms  linear both;
                 transform-origin: right;
                 & i {
                     animation: icon-rotate 400ms;
@@ -62,7 +62,7 @@
         }
     }
     &--checkbloc {
-        transform: scale(0); 
+        transform: scaleX(0);
     }
 }
 
@@ -95,3 +95,23 @@
 }
 
 
+/* Menu card loader */
+
+.menu__card {
+    animation: menu-loader 1000ms both;
+    transform-origin: top;
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            animation-delay: 200ms * $i;
+        }
+    }
+}
+
+@keyframes menu-loader {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
