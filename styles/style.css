@@ -310,6 +310,7 @@ template {
 /* font-size */
 /* font-weight */
 /* display */
+/* mixin media queries */
 /* Index Loader */
 .loader {
   animation: loader-out 0ms 2950ms forwards;
@@ -492,6 +493,16 @@ button {
   cursor: pointer;
   box-shadow: 0px 5px 8px 1px #aeaebe;
 }
+@media screen and (min-width: 801px) {
+  button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  button {
+    width: 25%;
+  }
+}
 
 /* centrage button page Menu */
 .button {
@@ -532,7 +543,7 @@ button {
   align-items: center;
 }
 
-/* Index - Partie "fontionnement" */
+/* INDEX - Partie "fontionnement" */
 .functioning__card-style {
   background-color: #F5F5F7;
   width: 85%;
@@ -542,11 +553,14 @@ button {
   box-shadow: 0px 5px 8px 1px #d9d9e0;
 }
 
-/* Index - Carte des restaurants */
+/* INDEX - Carte des restaurants */
 .restaurant__card {
   width: 90%;
   height: 250px;
-  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 5%;
   border-radius: 20px;
   box-shadow: 0px 5px 8px 1px #d9d9e0;
   position: relative;
@@ -594,7 +608,7 @@ button {
   height: 100%;
 }
 
-/* Contenu - Carte des plats */
+/* MENU - Carte des plats */
 .menu__card {
   background-color: white;
   border-radius: 15px;
@@ -663,7 +677,8 @@ button {
   display: block;
 }
 
-/* Index */
+/* --- Index --- */
+/* Index - partie "Reservez" */
 .prev__location {
   height: 50px;
   display: flex;
@@ -698,15 +713,39 @@ button {
   font-size: 1.1em;
 }
 
+/* Index- partie "Fonctionnement" */
 .functioning {
   padding: 50px 0;
 }
 .functioning h1 {
   margin-left: 5%;
 }
+@media screen and (min-width: 801px) {
+  .functioning__cardflex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .functioning__cardflex {
+    display: flex;
+  }
+}
 .functioning__card {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 801px) {
+  .functioning__card {
+    width: 35%;
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .functioning__card {
+    width: 25%;
+  }
 }
 .functioning__card span {
   width: 25px;
@@ -730,6 +769,7 @@ button {
   font-weight: 600;
 }
 
+/* Index - partie "Restaurant" */
 .restaurant {
   background: #F5F5F7;
   padding: 30px 0;
@@ -737,8 +777,37 @@ button {
 .restaurant__title {
   margin-left: 5%;
 }
+@media screen and (min-width: 801px) {
+  .restaurant__cardflex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurant__cardflex {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 801px) {
+  .restaurant__card {
+    width: 35%;
+    margin: 30px 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .restaurant__card {
+    width: 30%;
+    margin: 30px 10%;
+  }
+}
 
-/* Menu page */
+/* --- MENU --- */
 .head__img {
   height: 200px;
   width: 100%;
@@ -821,27 +890,29 @@ button {
   margin: 10px 0;
 }
 
+/*
 .loader {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  z-index: 5;
-  position: fixed;
-  inset: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    z-index: 5;
+    position: fixed;
+    inset: 0;
+    &__text {
+        font-family: 'Shrikhand';
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    &__spinner  {
+        width: 70px;
+        height: 70px;
+        border-top: 2px solid #15DEA5;
+        border-radius: 70px;
+    }
 }
-.loader__text {
-  font-family: "Shrikhand";
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-.loader__spinner {
-  width: 70px;
-  height: 70px;
-  border-top: 2px solid #15DEA5;
-  border-radius: 70px;
-}
+*/
 
 /*# sourceMappingURL=style.css.map */

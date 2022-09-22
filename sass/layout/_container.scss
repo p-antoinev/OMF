@@ -1,4 +1,6 @@
-/* Index */
+/* --- Index --- */
+
+/* Index - partie "Reservez" */
 .prev {
     &__location {
         height: 50px;
@@ -35,14 +37,33 @@
     }
 }
 
+/* Index- partie "Fonctionnement" */
 .functioning {
     padding: 50px 0;
     & h1 {
         margin-left: 5%;
     }
+    &__cardflex {
+        @include tablette-only{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 5%;
+            
+        }
+        @include desktop-only{
+            display: flex;
+        }
+    }
     &__card {
         display: flex;
         align-items: center;
+        @include tablette-only{
+            width: 35%;
+            margin: 20px;
+        }
+        @include desktop-only{
+            width: 25%;
+        }
         & span {
             width: 25px;
             height: 25px;
@@ -67,15 +88,42 @@
     }
 }
 
+/* Index - partie "Restaurant" */
 .restaurant{
     background: $color-background;
     padding: 30px 0;
     &__title {
         margin-left: 5%;
     }
+    &__cardflex {
+        @include tablette-only{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        @include desktop-only{
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: auto;
+        }
+    }
+    &__card {
+        @include tablette-only{
+            width: 35%;
+            margin: 30px 20px;
+        }
+        @include desktop-only{
+            width: 30%;
+            margin: 30px 10%;
+        }
+    }
 }
 
-/* Menu page */
+
+/* --- MENU --- */
 .head__img{
     height: 200px;
     width: 100%;

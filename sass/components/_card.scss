@@ -1,4 +1,4 @@
-/* Index - Partie "fontionnement" */
+/* INDEX - Partie "fontionnement" */
 .functioning__card-style {
     background-color: $color-background;
     width: 85%;
@@ -8,11 +8,14 @@
     @include shadow;
 }
 
-/* Index - Carte des restaurants */ 
+/* INDEX - Carte des restaurants */ 
 .restaurant__card {
     width: 90%;
     height: 250px;
-    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 5%;
     @include bordure;
     @include shadow;
     position: relative;
@@ -56,7 +59,7 @@
     }
 }
 
-/* Contenu - Carte des plats */
+/* MENU - Carte des plats */
 
 .menu__card {
     background-color: $color-white;
@@ -85,7 +88,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-    
     }
     &--checkbloc {
         width: 10%;
