@@ -177,6 +177,10 @@
         flex-direction: column;
         justify-content: space-between;
         height: 90%;
+        @include tablette-only{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         }
     }
     
