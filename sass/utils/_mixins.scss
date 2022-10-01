@@ -6,10 +6,10 @@
     border-radius: 20px;
 }
 
-@mixin typography_roboto ($fontsize-15: 1.5em,$fontweight-600: 600) {
+@mixin typography_roboto ($fontsize: 1.5em,$fontweight: 600) {
     font-family:"Roboto", Arial, Helvetica, sans-serif;
-    font-weight: $fontweight-600;
-    font-size: $fontsize-15;
+    font-weight: $fontweight;
+    font-size: $fontsize;
 }
 
 @mixin flexcenter {
